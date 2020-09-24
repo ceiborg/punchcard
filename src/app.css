@@ -1,0 +1,27 @@
+h1 {
+    color: deeppink;
+    text-align: center;
+    font-size-adjust: ;
+}
+.cell {
+  /*  width: 50px; */
+    height: 25px;
+    background: deepskyblue;
+    border-radius: 50%;
+    flex: 1 1 auto;
+    cursor: pointer; 
+    transition: background-color 0.3s linear;   
+
+}
+.cell.on{
+    background: deeppink;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+
+}
+#card{
+    width: 600px;
+    margin: auto;
+}
