@@ -1,0 +1,31 @@
+h1
+  color: deeppink
+  text-align: center
+
+h2
+  color: rgb(145, 4, 226)
+  text-align: center
+
+.row
+  display: flex
+  flex-direction: row
+  .cell
+    transition: background-color 0.3s linear
+  .cell, .color0, .color1
+    height: 25px
+    width: 25px
+    border-radius: 50%
+    cursor: pointer
+  .color0, .color1
+    margin: 0 30px
+
+#card
+  //width: 600px
+  margin: auto
+
+// prevent drag
+*, *::after, *::before
+  -webkit-user-select: none
+  -webkit-user-drag: none
+  -webkit-app-region: no-drag
+  cursor: default

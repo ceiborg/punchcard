@@ -1,8 +1,13 @@
-{ "scripts": {
-  "dev": "parcel index.html",
-  "build": "parcel build index.html --public-url ./"
-},
+{
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url ./"
+  },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.11"
+  },
+  "dependencies": {
+    "vanilla-picker": "^2.10.1"
   }
 }

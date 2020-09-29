@@ -1,6 +1,6 @@
 # Punchcard
 
-Inicializacion
+Inicializacion del servidor local
 
 ```bash
 cd Code

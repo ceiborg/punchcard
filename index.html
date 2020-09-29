@@ -3,14 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Punch Card</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./src/app.css">
+  <link rel="stylesheet" href="./src/app.sass">
 </head>
 
 <body>
   <header>
     <h1>Punch Card Creator</h1>
+    <h2>Ceiborg</h2>
+    <img width="300" src="img/tejido.jpg" alt="tejido" />
+    <hr/>
+    <!--linea-->
+    <p>Crea tu tarjeta perforada para tejer en Lady Tricot 320</p>
   </header>
   <div id="app">
     <button id="add-row">ADD ROW</button>
@@ -18,8 +23,19 @@
     <button id="download">DOWNLOAD</button>
     <div id="card">
     </div>
-  </div>
-  <script src="./src/app.js"></script>
+    <div>
+      <h3>Instrucciones</h3>
+      <ul>
+        <li>en el largo de todas las filas deben intervenir los dos colores (no pueden haber filas de un mismo color, si
+          columnas)</li>
+        <li> los casilleros de los 4 extremos deben ser celestes </li>
+        <li> al menos 70 casilleros deben ser rosas y siempre debe haber más casilleros celestes que rosas </li>
+        <li> el diseño NO puede ser simétrico </li>
+        <li> hacer un printscreen del resultado final y descargar con el botón de download el diseño perforado</li>
+      </ul>
+    </div>
+
+    <script src="./src/app.js"></script>
 </body>
 
 </html>
