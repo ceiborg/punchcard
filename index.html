@@ -3,39 +3,58 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Punch Card</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ceiborg Punch Card</title>
+  <meta name="description" content="Diseña tus tarjetas perforadas para tejido a maquina">
   <link rel="stylesheet" href="./src/app.sass">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <h1>Punch Card Creator</h1>
-    <h2>Ceiborg</h2>
-    <img width="300" src="img/tejido.jpg" alt="tejido" />
-    <hr/>
-    <!--linea-->
-    <p>Crea tu tarjeta perforada para tejer en Lady Tricot 320</p>
+<body>  <!-- todo lo q se ve--> 
+  <header class="main-header">
+    <a href="https://www.ceiborg.com" >
+      <img alt="ceiborg" src="img/logo_ceiborg.png" class="center pointer">
+      <h1 class="pointer">ceiborg </h1>
+    </a>
+    <hr align="center" width="30%">
+    <div class="title-header">
+      <h2>Punch Card</h2>
+      <h3>[Crea tu tarjeta perforada para tejido a Máquina]</h3>   
+    </div>
   </header>
-  <div id="app">
-    <button id="add-row">ADD ROW</button>
-    <button id="randomize">RANDOM</button>
-    <button id="download">DOWNLOAD</button>
-    <div id="card">
-    </div>
-    <div>
-      <h3>Instrucciones</h3>
-      <ul>
-        <li>en el largo de todas las filas deben intervenir los dos colores (no pueden haber filas de un mismo color, si
-          columnas)</li>
-        <li> los casilleros de los 4 extremos deben ser celestes </li>
-        <li> al menos 70 casilleros deben ser rosas y siempre debe haber más casilleros celestes que rosas </li>
-        <li> el diseño NO puede ser simétrico </li>
-        <li> hacer un printscreen del resultado final y descargar con el botón de download el diseño perforado</li>
-      </ul>
-    </div>
 
-    <script src="./src/app.js"></script>
+  <section class="content">
+    <h4>Como diseñar y cortar en laser tu Punch Card</h4>
+    <p>Manteniendo el click izquierdo sobre la grilla del centro, podés pintar los casilleros que serán los agujeros de tu tarjeta perforada. 
+    Manteniendo el botón derecho, los casilleros volveran al color de la base, por tanto seran en la tarjeta perforada el equivalente a la lana principal. </p>
+    <p>Haciendo click sobre las columnas laterales, podes modificar el color de base <i class="fas fa-arrow-left fa-1x"></i> y el del dibujo <i class="fas fa-arrow-right fa-1x"></i>. Si modificas el color en cualquiera de las dos columnas, en el primer casillero, se modificará el color de todo el diseño, si en cambio lo haces desde otra posición, la modificación se hará a partir de esa posición y hacia <i class="fas fa-arrow-down fa-1x"></i>.</p>
+    <p>Con <i class="fas fa-plus-circle fa-2x"></i> podés agregar la cantidad de filas que quieras. </p>
+    <p>Con <i class="fas fa-dice fa-2x"></i> podes generar dibujos algorítmicos.</p>
+    <p>Con <i class="far fa-image fa-2x"></i> podés sacar una foto de tu diseño y con <i class="fas fa-caret-square-down fa-2x"></i> te descargas el .svg para cortar en la cortadora laser. El tamaño de las tarjetas es para usar en la Wanora Lady Tricot 320.</p>
+  </section>
+  
+  <div id="app">
+    <button id="add-row" class="pointer"><i class="fas fa-plus-circle fa-2x"></i></button>
+    <button id="randomize" class="pointer"><i class="fas fa-dice fa-2x"></i></button>
+    <button id="picture" class="pointer"><i class="far fa-image fa-2x"></i></button>
+    <button id="download" class="pointer"><i class="fas fa-caret-square-down fa-2x"></i></button>
+  
+  <div id="card"> 
+  </div>
+    <script src="./src/app.js"></script>        
 </body>
+
+<footer  class="footer">
+  <a href="https://www.ceiborg.com" target="_blank" class="ceiborg pointer">ceiborg.com</i></a>
+  <p>hola@ceiborg.com</p>
+    <li ><a href="https://www.instagram.com/ceiborgtextil/" target="_blank" class="pointer">
+        <i class="fab fa-instagram fa-2x"></i></a>
+    </li>
+    <li><a href="https://www.facebook.com/ceiborgtextil" target="_blank" class="pointer">
+    <i class="fab fa-facebook-f fa-2x"></i></a>
+    </li>
+    <li><a href="https://www.youtube.com/channel/UChurbsaMuy3oiXeb1RbtkWg" target="_blank" class="pointer"><i class="fab fa-youtube fa-2x"></i>
+    </a>
+    </li>
+</footer> 
 
 </html>

@@ -1,9 +1,11 @@
 import Picker from 'vanilla-picker'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const card = document.getElementById("card")
 const addRowButton = document.getElementById("add-row")
 const randomizeButton = document.getElementById("randomize")
 const downloadButton = document.getElementById("download")
+const pictureButton = document.getElementById("picture")
 
 const picker = new Picker({
   popup: 'bottom',
@@ -123,7 +125,7 @@ const initialize = () => {
   }
 
   // set default colors
-  cardState[0].colors = ['deepskyblue', 'deeppink']
+  cardState[0].colors = ['deepskyblue', ' #FF3366']
   updateUI()
 
 }
@@ -209,6 +211,50 @@ downloadButton.addEventListener("click", (ev) => {
   downloadSVG()
 })
 
+// handle button click picture
+pictureButton.addEventListener("click", (ev) => {
+  downloadSVGcolor()
+})
+
+const downloadSVGcolor = () => {
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 300 800"
+    height="800mm"
+    width="300mm"
+    units="mm"
+  >
+  `
+  const r = (2.3)*2 //radio grilla
+  const sw = 0 // stroke
+  for (let y = 0; y < cardState.length; y++) {
+    const cy = (r + 4 + y * 4.5)*2 //distribucion en y r + (la ubicacion del 1 circulo en y) + (la dif entre el ultima y el primer circulo (y) dividido la cantidad de circulos -1)
+    
+    for (let x = 0; x < columnCount; x++) {
+      const on = cardState[y].states[x]
+      const color = getColor(on ? 1 : 0,y)
+      const cx = (r + 30.5 + x * 4.5)*2 //distribucion en x
+      
+      svg += `<circle cx="${cx}" cy="${cy}" r="${r}" stroke="black" stroke-width="${sw}" style="fill:${color}" fill="${color}"  />`
+
+      
+
+    }
+  }
+
+  svg += `
+  <rect x="13" y="3" width="141" height="96" fill="transparent" style="fill:none" stroke="black" stroke-width="${sw}" />
+  </svg>`
+
+  const filename = 'punch-card-design.svg'
+  const blob = new Blob([svg], {
+    type: 'image/svg+xml'
+  })
+  const url = window.URL.createObjectURL(blob)
+  const a = document.createElement("a")
+  a.href = url
+  a.download = filename
+  a.click()
+}
 
 
 const downloadSVG = () => {
@@ -238,8 +284,6 @@ const downloadSVG = () => {
   <rect x="13" y="3" width="141" height="96" fill="transparent" style="fill:none" stroke="black" stroke-width="${sw}" />
   </svg>`
 
-
-
   const filename = 'punch-card.svg'
   const blob = new Blob([svg], {
     type: 'image/svg+xml'
@@ -253,3 +297,5 @@ const downloadSVG = () => {
 
 // kick off
 initialize()
+
+

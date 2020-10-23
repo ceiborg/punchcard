@@ -1,13 +1,16 @@
 {
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html --public-url ./"
+    "build": "parcel build index.html --public-url ./",
+    "upload": "dotenv -- bash -c 'ncftpput -z -R -v -u ceiborg -p \"$FTPPWD\"  ftp.ceiborg.com /public_html/punchcard dist/*'"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.11"
   },
   "dependencies": {
+    "dotenv-cli": "^4.0.0",
     "vanilla-picker": "^2.10.1"
   }
 }

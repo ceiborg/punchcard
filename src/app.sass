@@ -1,11 +1,102 @@
+.pointer
+  cursor: pointer
+
 h1
-  color: deeppink
+  font-size: 48px
   text-align: center
+  padding: 0px 0px 16px 
+  margin: 0px 0px 8px
+  color: white
+  font-weight: lighter
+  &:hover
+    font-weight: bold 
 
 h2
-  color: rgb(145, 4, 226)
+  font-size: 68px
+  color: white
   text-align: center
+  padding: 25px 0px 16px 
+  margin: 0px 0px 8px
 
+h3  
+  font-size: 24px
+  color: white
+  text-align: center
+  padding: 0px 0px 0px 
+  font-weight: lighter
+
+h4  
+  font-weight: lighter
+  font-size: 24px
+  color: #FF3366
+
+button
+  color: white
+  padding: 16px 48px
+  background-color: #FF3366
+  border-radius: 100px 
+  border: none
+  outline: 0
+  &:hover
+      background-color: #333
+
+body
+  margin: 0
+  font-family: Raleway, sans-serif
+  color: #333333
+  line-height: 1.5
+   
+.main-header
+  background-color: rgba(0, 0, 0, .6)
+  background-image: url("/img/tejido2.jpg") 
+  background-blend-mode: multiply
+  height: 418px
+  background-position: center 
+  background-repeat: no-repeat 
+  background-size: cover 
+  position: relative 
+     
+.main-header a
+  text-decoration: none
+  
+.center 
+  display: block
+  margin-left: auto
+  margin-right: auto
+  padding: 25px 0px 0px
+
+.content
+  text-align: left
+  width: 800px
+  display: block
+  margin: 50px auto
+  padding: 0 1.5em
+
+  p
+    font-size: 1.2rem
+  
+
+.footer 
+  background-color:  #2e2e2e
+  text-align: center
+  font-family: Raleway, sans-serif
+  font-size: 1rem
+  padding: 30px 0px 45px
+  margin-top: 50px
+
+  p
+    color: white
+ 
+  li
+    display: inline
+  a
+    padding: .5em
+    color: white
+    text-decoration: none
+    &:hover
+      font-weight: bold 
+      color:  #FF3366
+  
 .row
   display: flex
   flex-direction: row
@@ -19,9 +110,16 @@ h2
   .color0, .color1
     margin: 0 30px
 
-#card
-  //width: 600px
-  margin: auto
+#app
+  width: 800px
+  margin: 20px auto
+  display: block
+  
+   
+
+#card 
+  margin: 20px auto !important
+  padding-bottom: 50px !important
 
 // prevent drag
 *, *::after, *::before
@@ -29,3 +127,6 @@ h2
   -webkit-user-drag: none
   -webkit-app-region: no-drag
   cursor: default
+
+
+
